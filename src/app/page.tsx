@@ -8,10 +8,10 @@ import { TextGenerateEffect } from "./components/ui/text-generate-effect";
 import { useRef } from "react";
 import { Button } from "./components/ui/moving-border";
 import { StickyScroll } from "./components/ui/sticky-scroll-reveal";
-import ScrollTracker from "./Carview/page";
+import ScrollTracker from "./components/ui/ScrollTracker";
 // import { StickyScrollImages } from "./components/ui/StickyScrollWithImages";
 import { Image } from "@nextui-org/react";
-import gsap from "gsap";
+// import gsap from "gsap";
 // import ImageSequence from "./Carview/ImageSequence";
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -179,9 +179,7 @@ export default function Home() {
 
   
 
-  const aimages = Array.from({ length: 33 }, (_, index) =>
-    `/images/animatedshow/ezgif-frame-0${String(index+1)}.jpg`
-  );
+ 
 
   return (
     <>
@@ -232,7 +230,7 @@ export default function Home() {
             <div className="flex justify-center mt-10 items-center">
               <Button
                 borderRadius="1.75rem"
-                className="text-lg bg-transparent hover:bg-[#ea0025] hover:text-white"
+                className="text-lg bg-transparent hover:bg-[#ea0025] hover:text-white transition duration-150 ease-in-out"
               >
                 <a
                   href="/contact-us"

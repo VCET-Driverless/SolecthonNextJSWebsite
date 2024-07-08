@@ -17,8 +17,8 @@ export default function RootLayout({
     <html lang="en" >
       <body className="bg-[#f7f3ea] ">
           <Providers>
-      <BackgroundBeams
-      />
+      {/* <BackgroundBeams
+      /> */}
           <NavBar />
           {children}
         </Providers>
