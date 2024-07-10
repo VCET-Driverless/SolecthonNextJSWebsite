@@ -36,15 +36,15 @@ export default function NavBar() {
   const [hoveredPath, setHoveredPath] = useState(pathname);
 
   return (
-    <div className=" overflow-hidden py-2 px-2 w-full absolute top-0 z-[100] bg-[#f4f0e3]/80 backdrop-blur-sm">
+    <div className=" overflow-hidden py-2 px-2 w-full absolute top-0 z-[100] bg-black/80 backdrop-blur-sm">
       <nav className="flex gap-2 relative justify-start w-full z-[100]  rounded-full">
         <div className="flex w-[120px] animate">
 
-        <img src="/images/onlyLogoreal.png" className="w-15 h-10 " alt="logo" />
+        <img src="/images/onlyLogoreal.png" className="w-15 h-10 rounded-full " alt="logo" />
       
         </div>
         <div className="flex justify-start items-center w-full ">
-          <h2 className="font-sans font-normal text-2xl text-center "> VCET SOLECTHON</h2>
+          <h2 className="font-sans font-normal text-2xl text-[#f4f0e3] text-center "> VCET SOLECTHON</h2>
         </div>
          
         <div className="flex justify-end items-center w-full">
@@ -55,8 +55,8 @@ export default function NavBar() {
           return (
             <Link
               key={item.path}
-              className={`px-4 py-1  text-sm lg:text-base relative no-underline duration-300 ease-in ${
-                isActive ? "text-[#000]" : "text-[#2F3645]"
+              className={`px-4 py-1  text-sm lg:text-base relative no-underline transition duration-150 ease-out hover:ease-in ${
+                isActive ? "text-[#f4f0e3]" : "text-[#6291f7]"
               }`}
               data-active={isActive}
               href={item.path}
