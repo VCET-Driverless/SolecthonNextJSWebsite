@@ -11,6 +11,7 @@ import { StickyScroll } from "./components/ui/sticky-scroll-reveal";
 import ScrollTracker from "./components/ui/ScrollTracker";
 // import { StickyScrollImages } from "./components/ui/StickyScrollWithImages";
 import { Image } from "@nextui-org/react";
+import { CardBody, CardContainer, CardItem } from "./components/ui/3d-card";
 // import gsap from "gsap";
 // import ImageSequence from "./Carview/ImageSequence";
 export default function Home() {
@@ -177,12 +178,13 @@ export default function Home() {
     },
   ];
 
-  
 
- 
+
+
 
   return (
     <>
+    
       <div className="snap-y snap-mandatory h-screen overflow-y-scroll overflow-clip z-10">
         {/* Carousel */}
         <Carousel />
@@ -227,10 +229,10 @@ export default function Home() {
                 />
               )}
             </div>
-            <div className="flex justify-center mt-10 items-center">
+            <div className="flex justify-center mt-10 items-center animate-bounce">
               <Button
                 borderRadius="1.75rem"
-                className="text-lg bg-transparent hover:bg-[#ea0025] hover:text-white transition duration-150 ease-in-out"
+                className="text-lg bg-transparent hover:bg-[#ea0025] hover:text-white "
               >
                 <a
                   href="/contact-us"
@@ -251,19 +253,134 @@ export default function Home() {
         </div>
 
         {/* Car View */}
-              
+
         <div id="trigger" className=" snap-center  w-screen h-screen  bg-white justify-center">
-              <ScrollTracker />
+          <ScrollTracker />
         </div>
+        {/* Links View */}
+        <div className=" snap-center  w-screen h-screen  bg-white justify-evenly">
+              <div className="relative top-20 text-slate-400 ">
+        <h1 className=" text-4xl font-bold text-center  scale-125 "> Electric Future Mobility</h1>
+                </div>
+          <div className="flex flex-col lg:flex-row overflow-y-scroll w-full h-full  items-center justify-around ">
+           <a href="/team" >
+            <CardContainer className="inter-var">
+              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+                <CardItem
+                  translateZ="50"
+                  className="text-xl font-bold text-neutral-600 dark:text-white"
+                >
+                  Meet Our Team
+                </CardItem>
+                <CardItem
+                  as="p"
+                  translateZ="60"
+                  className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                >
+                 Our team is composed of amazing group of engineers, innovators and problem solvers.
+                </CardItem>
+                <CardItem
+                  translateZ="100"
+                  
+                  className="w-full mt-4"
+                >
+                  <Image
+                    src="/images/onlyLogoreal.png"
+                    height="1000"
+                    width="1000"
+                    className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                    alt="thumbnail"
+                  />
+                </CardItem>
+                
+              </CardBody>
+            </CardContainer>
+           </a>
+            <a href="/Sponsors" >
+            <CardContainer className="inter-var">
+              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+                <CardItem
+                  translateZ="50"
+                  className="text-xl font-bold text-neutral-600 dark:text-white"
+                >
+                  Meet Our Sponsors
+                </CardItem>
+                <CardItem
+                  as="p"
+                  translateZ="60"
+                  className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                >
+               Our sponsors make everything we do possible
+                </CardItem>
+                <CardItem
+                  translateZ="100"
+                  // rotateX={20}
+                  // rotateZ={-10}
+                  className="w-full mt-4"
+                >
+                  <Image
+                    src="/images/onlyLogoreal.png"
+                    height="1000"
+                    width="1000"
+                    className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                    alt="thumbnail"
+                  />
+                </CardItem>
+                
+              </CardBody>
+            </CardContainer>
+            </a>
+            <a href="/Cars">
+
+            <CardContainer className="inter-var"  >
+              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+                <CardItem
+                  translateZ="50"
+                  className="text-xl font-bold text-neutral-600 dark:text-white"
+                >
+                  Meet Our Cars
+                </CardItem>
+                <CardItem
+                  as="p"
+                  translateZ="60"
+                  className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                >
+                  Our team produced number of unique and impressive vehicles           
+                          </CardItem>
+                <CardItem
+                  translateZ="100"
+                  // rotateX={20}
+                  // rotateZ={-10}
+                  className="w-full mt-4"
+                >
+                  <Image
+                    src="/images/onlyLogoreal.png"
+                    height="1000"
+                    width="1000"
+                    className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                    alt="thumbnail"
+                  />
+                </CardItem>
+                
+              </CardBody>
+            </CardContainer>
+            </a>
+
+          </div>
+
+        </div>
+
+
+
 
         {/* statics */}
 
         <section className="py-14 h-[50vh]">
           <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
             <div className="max-w-2xl mx-auto text-center flex justify-center items-center">
-              <Image src="/images/onlyLogoreal.png" alt="Solecthon" width={180} height={150} 
-              isBlurred
-              
+              <Image src="/images/onlyLogoreal.png" alt="Solecthon" width={180} height={150}
+                isBlurred
+
               />
               {/* <p className="mt-3">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis sollicitudin quam ut tincidunt.
@@ -276,13 +393,13 @@ export default function Home() {
                     <h4 className="text-4xl text-red-500 font-semibold">
                       {item.data === "INF" ? (
                         <Image
-                     
+
                           isZoomed
                           src="/images/infinity.svg" // Replace with your image path
                           alt="INF"
                           width={70}
                           height={60}
-                       
+
                         />
                       ) : (
                         item.data
@@ -295,13 +412,13 @@ export default function Home() {
             </div>
           </div>
         </section>
-                {/* Footer */}
+        {/* Footer */}
         <footer className="text-gray-500 h-[50vh] snap-end px-4 py-3 max-w-screen-xl mx-auto md:px-8">
           <div className="gap-6 justify-between md:flex">
             <div className="flex-1">
               <div className="max-w-xs">
                 <Image
-                  
+
                   alt="VCET Logo"
                   src="/images/vcet-logo.jpeg"
                   className=" w-24 h-24 rounded-full object-cover"
