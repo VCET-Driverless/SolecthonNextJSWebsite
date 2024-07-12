@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, SetStateAction } from 'react';
 
 const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -26,7 +26,7 @@ const Carousel = () => {
     setActiveIndex((prevIndex) => (prevIndex === items.length - 1 ? 0 : prevIndex + 1));
   };
 
-  const handleIndicatorClick = (index) => {
+  const handleIndicatorClick = (index: SetStateAction<number>) => {
     setActiveIndex(index);
   };
 
