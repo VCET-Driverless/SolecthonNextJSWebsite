@@ -11,12 +11,14 @@ export const TextGenerateEffect = ({
   className?: string;
 }) => {
   const [scope, animate] = useAnimate();
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const [showH1, setShowH1] = useState(false);
   let wordsArray = words.split(" ");
 
+  
   useEffect(() => {
     const sequence = async () => {
+      if(!containerRef.current) return;
       if (containerRef.current) {
         const spans = containerRef.current.querySelectorAll("span");
 

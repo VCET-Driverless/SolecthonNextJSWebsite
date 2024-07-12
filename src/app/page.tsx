@@ -107,7 +107,8 @@ export default function Home() {
     observer.observe(textBlockRef.current);
 
     return () => {
-      if (observer && observer.unobserve) {
+      if(!textBlockRef.current) return;
+      if (observer && observer.unobserve ) {
         observer.unobserve(textBlockRef.current);
       }
     };
@@ -262,7 +263,7 @@ export default function Home() {
               <div className="relative top-20 text-slate-400 ">
         <h1 className=" text-4xl font-bold text-center  scale-125 "> Electric Future Mobility</h1>
                 </div>
-          <div className="flex flex-col lg:flex-row overflow-y-scroll w-full h-full  items-center justify-around ">
+          <div className="flex flex-col lg:flex-row overflow-y-scroll w-full h-full  items-center justify-around p-4">
            <a href="/team" >
             <CardContainer className="inter-var">
               <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
@@ -310,7 +311,7 @@ export default function Home() {
                   translateZ="60"
                   className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
                 >
-               Our sponsors make everything we do possible
+               Our sponsors make everything we do possible and support us in our mission .
                 </CardItem>
                 <CardItem
                   translateZ="100"
@@ -424,8 +425,8 @@ export default function Home() {
                   className=" w-24 h-24 rounded-full object-cover"
                 />
                 <p className="leading-relaxed mt-2 text-[15px]">
-                  Lorem Ipsum has been the industry's standard dummy text ever
-                  since the 1500s.
+                Lorem Ipsum has been the industry&apos;s standard dummy text ever
+                since the 1500s.
                 </p>
               </div>
               <form onSubmit={(e) => e.preventDefault()}>
