@@ -1,6 +1,6 @@
 // src/app/layout.tsx
 import "./globals.css";
-import NavBar from "./components/Navbar";
+import NavBar from "./components/ui/Navbar";
 import { BackgroundBeams } from "./components/ui/background-beams";
 import {Providers} from "./providers";
 export const metadata = {

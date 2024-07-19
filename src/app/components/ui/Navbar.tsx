@@ -14,7 +14,7 @@ const navItems = [
   },
   {
     path: "/teams",
-    name: "Now",
+    name: "Teams",
   },
   {
     path: "/guestbook",
