@@ -13,7 +13,7 @@ import ScrollTracker from "./components/ui/ScrollTracker";
 import { Image } from "@nextui-org/react";
 import { CardBody, CardContainer, CardItem } from "./components/ui/3d-card";
 // import gsap from "gsap";
-// import ImageSequence from "./Carview/ImageSequence";
+// import ImageSequence from "./CarviewimageSequence";
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
   const [hasEnteredViewport, setHasEnteredViewport] = useState(false);
@@ -123,7 +123,7 @@ export default function Home() {
         <Image
           isBlurred
           isZoomed
-          src="/images/carousel/7.0.jpg"
+          src="images/carousel/7.0.jpg"
           alt="Our Objective"
           className="m-5 w-[450px] h-[300px] object-cover"
         />
@@ -137,7 +137,7 @@ export default function Home() {
         <Image
           isBlurred
           isZoomed
-          src="/images/carousel/3.1.png"
+          src="images/carousel/3.1.png"
           alt="Our Goal"
           className="m-5 w-[450px] h-[300px] object-cover"
         />
@@ -151,7 +151,7 @@ export default function Home() {
         <Image
           isBlurred
           isZoomed
-          src="/images/carousel/3.0.png"
+          src="images/carousel/3.0.png"
           alt="Our Aim"
           className="m-5 w-[450px] h-[300px] object-cover"
         />
@@ -286,7 +286,7 @@ export default function Home() {
                   className="w-full mt-4"
                 >
                   <Image
-                    src="/images/onlyLogoreal.png"
+                    src="images/onlyLogoreal.png"
                     height="1000"
                     width="1000"
                     className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -320,7 +320,7 @@ export default function Home() {
                   className="w-full mt-4"
                 >
                   <Image
-                    src="/images/onlyLogoreal.png"
+                    src="images/onlyLogoreal.png"
                     height="1000"
                     width="1000"
                     className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -355,7 +355,7 @@ export default function Home() {
                   className="w-full mt-4"
                 >
                   <Image
-                    src="/images/onlyLogoreal.png"
+                    src="images/onlyLogoreal.png"
                     height="1000"
                     width="1000"
                     className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -379,7 +379,7 @@ export default function Home() {
         <section className="py-14 h-[50vh]">
           <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
             <div className="max-w-2xl mx-auto text-center flex justify-center items-center">
-              <Image src="/images/onlyLogoreal.png" alt="Solecthon" width={180} height={150}
+              <Image src="images/onlyLogoreal.png" alt="Solecthon" width={180} height={150}
                 isBlurred
 
               />
@@ -396,7 +396,7 @@ export default function Home() {
                         <Image
 
                           isZoomed
-                          src="/images/infinity.svg" // Replace with your image path
+                          src="images/infinity.svg" // Replace with your image path
                           alt="INF"
                           width={70}
                           height={60}
@@ -421,7 +421,7 @@ export default function Home() {
                 <Image
 
                   alt="VCET Logo"
-                  src="/images/vcet-logo.jpeg"
+                  src="images/vcet-logo.jpeg"
                   className=" w-24 h-24 rounded-full object-cover"
                 />
                 <p className="leading-relaxed mt-2 text-[15px]">

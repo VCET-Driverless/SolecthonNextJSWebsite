@@ -40,7 +40,7 @@ export default function NavBar() {
       <nav className="flex gap-2 relative justify-start w-full z-[100]  rounded-full">
         <div className="flex w-[120px] animate">
 
-        <img src="/images/onlyLogoreal.png" className="w-15 h-10 rounded-full " alt="logo" />
+        <img src="images/onlyLogoreal.png" className="w-15 h-10 rounded-full " alt="logo" />
       
         </div>
         <div className="flex justify-start items-center w-full ">
