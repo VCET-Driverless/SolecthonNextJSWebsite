@@ -45,7 +45,7 @@ export default function NavBar() {
       
         </div>
         <div className="flex justify-start items-center w-full ">
-          <h2 className=" font-normal text-2xl text-white text-center font-gravicon "> VCET SOLECTHON</h2>
+          <h2 className=" font-normal text-2xl text-white text-center  "> VCET SOLECTHON</h2>
         </div>
          
         <div className="flex justify-end items-center w-full">

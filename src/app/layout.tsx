@@ -16,10 +16,7 @@ export default function RootLayout({
   return (
     <>
     <html lang="en" >
-    <head>
-    {/* Include the Gravicon font */}
-    <link href="https://fonts.googleapis.com/css2?family=Gravicon:wght@400;700" rel="stylesheet" />
-  </head>
+    
       <body className="bg-[#f7f3ea] ">
           <Providers>
       {/* <BackgroundBeams
