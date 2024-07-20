@@ -25,15 +25,15 @@ export const TextGenerateEffect = ({
         // Animate words in
         await animate(
           spans,
-          { opacity: 0.8 },
-          { duration: 2, delay: stagger(0.2) }
+          { opacity: 0.6 },
+          { duration: 1, delay: stagger(0.2) }
         );
 
         // Animate words out
         await animate(
           spans,
           { opacity: 0 },
-          { duration: 2, delay: stagger(0.2, { startDelay: 1 }) } // 1 second pause before fading out
+          { duration: 1, delay: stagger(0.2, { startDelay: 1 }) } // 1 second pause before fading out
         );
 
         // Show h1 tag using Tailwind CSS
@@ -63,7 +63,7 @@ export const TextGenerateEffect = ({
         {wordsArray.map((word, idx) => (
           <motion.span
             key={word + idx}
-            className="dark:text-white text-white opacity-0"
+            className="dark:text-black font-cursive font-extralight opacity-0 italic   text-white "
           >
             {word}{" "}
           </motion.span>
@@ -77,7 +77,7 @@ export const TextGenerateEffect = ({
       <div className="mt-4">
         <div className="dark:text-white text-black text-2xl leading-snug tracking-wide">
           {showH1 ? (
-            <h1 className="text-3xl text-[#A91D3A] text-center transition-opacity duration-3000 ease-in-out">
+            <h1 className="text-3xl text-yellow text-center transition-opacity duration-3000 ease-in-out">
               A STEP TOWARDS SUSTAINABILITY
             </h1>
           ) : (

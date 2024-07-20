@@ -55,7 +55,7 @@ const ScrollTracker: React.FC = () => {
       <div className='h-[400vh]'></div>
       <img
         className={`sticky z-0 top-0 left-0 hell h-screen w-screen transition-transform duration-1000 ${scrollValue > 1000 ? '-translate-x-full' : 'translate-x-0'}`}
-        src={`/images/animatedshow/ezgif-frame-0${(Math.floor(scrollValue / 33) + 1) > 33 ? 33 : (Math.floor(scrollValue / 33) + 1)}.jpg`}
+        src={`images/animatedshow/ezgif-frame-0${(Math.floor(scrollValue / 33) + 1) > 33 ? 33 : (Math.floor(scrollValue / 33) + 1)}.jpg`}
       />
     </div>
   );

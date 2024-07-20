@@ -41,14 +41,14 @@ export const StickyScroll = ({
   });
 
   const backgroundColors = [
-    "var(--cyan-500)",
-    "var(--pink-500)",
-    "var(--orange-500)",
+    "var(--yellow)",
+    "var(--yellow)",
+    "var(--yellow)",
   ];
   const linearGradients = [
-    "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
-    "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
-    "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
+    "linear-gradient(to bottom right, var(--yellow), var(--black))",
+    "linear-gradient(to bottom right, var(--yellow), var(--white))",
+    "linear-gradient(to bottom right, var(--yellow), var(--black))",
   ];
 
   const [backgroundGradient, setBackgroundGradient] = useState(
@@ -79,7 +79,7 @@ export const StickyScroll = ({
                   opacity: activeCard === index ? 1 : 0.3,
 
                 }}
-                className="text-4xl font-bold font-sans text-[#ea0025] w-full text-justify"
+                className="text-4xl font-bold font-sans text-black w-full text-justify"
               >
                 {item.title}
               </motion.p>
@@ -105,7 +105,7 @@ export const StickyScroll = ({
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-          "hidden lg:block h-[300px] w-[450px] rounded-md shadow-xl shadow-red-700 sticky top-48 overflow-visible",
+          "hidden lg:block h-[300px] w-[450px] rounded-md shadow-xl shadow-yellow sticky top-48 overflow-visible",
           contentClassName
         )}
       >

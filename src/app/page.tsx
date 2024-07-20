@@ -207,15 +207,15 @@ export default function Home() {
           )}
 
           {/* Black Tint Overlay */}
-          <div className=" absolute top-0 left-0 w-full h-full bg-[#000000] opacity-80 z-10"></div>
+          <div className=" absolute top-0 left-0 w-full h-full bg-black opacity-65 z-10"></div>
 
           {/* Content */}
           <div className="relative z-20 flex flex-col justify-evenly items-center w-full h-full">
             <div className=" flex justify-center items-center  ">
-              <h1 id="hone" className="text-4xl font-bold text-[#f02d37]">
-                WHO ARE /
+              <h1 id="hone" className="text-4xl font-bold text-yellow m-5">
+                WHO ARE 
               </h1>
-              <h1 id="htwo" className="text-4xl font-bold text-[#f7f3ea]">
+              <h1 id="htwo" className="text-4xl font-bold text-white">
                 WE ?
               </h1>
             </div>
@@ -226,14 +226,14 @@ export default function Home() {
               {hasEnteredViewport && (
                 <TextGenerateEffect
                   words="Solar Electric Autonomous car team of Vidyavardhini's College Of Engineering & Technology, is an entirely student-run, non-profit organization fueled by its member's passion for environmentally sustainable technology. All team members get unique opportunity to gain valuable hands-on engineering and business experience while raising community awareness of clean energy vehicles."
-                  className="w-[60vw] text-[#1a4a9a] text-justify"
+                  className="w-[60vw] text-white text-justify"
                 />
               )}
             </div>
             <div className="flex justify-center mt-10 items-center animate-bounce">
               <Button
                 borderRadius="1.75rem"
-                className="text-lg bg-transparent hover:bg-[#ea0025] hover:text-white "
+                className="text-lg bg-transparent hover:bg-yellow hover:text-white "
               >
                 <a
                   href="/contact-us"
@@ -269,14 +269,14 @@ export default function Home() {
               <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
                 <CardItem
                   translateZ="50"
-                  className="text-xl font-bold text-neutral-600 dark:text-white"
+                  className="text-xl font-bold text-black dark:text-white"
                 >
                   Meet Our Team
                 </CardItem>
                 <CardItem
                   as="p"
                   translateZ="60"
-                  className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  className="text-black text-sm max-w-sm mt-2 dark:text-neutral-300"
                 >
                  Our team is composed of amazing group of engineers, innovators and problem solvers.
                 </CardItem>

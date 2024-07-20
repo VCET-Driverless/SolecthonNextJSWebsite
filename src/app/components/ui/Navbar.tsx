@@ -36,7 +36,8 @@ export default function NavBar() {
   const [hoveredPath, setHoveredPath] = useState(pathname);
 
   return (
-    <div className=" overflow-hidden py-2 px-2 w-full absolute top-0 z-[100] bg-black/80 backdrop-blur-sm">
+     
+    <div className=" overflow-hidden py-2 px-2 w-full absolute top-0 z-[100] bg-black backdrop-blur-sm">
       <nav className="flex gap-2 relative justify-start w-full z-[100]  rounded-full">
         <div className="flex w-[120px] animate">
 
@@ -44,7 +45,7 @@ export default function NavBar() {
       
         </div>
         <div className="flex justify-start items-center w-full ">
-          <h2 className="font-sans font-normal text-2xl text-[#f4f0e3] text-center "> VCET SOLECTHON</h2>
+          <h2 className=" font-normal text-2xl text-white text-center font-gravicon "> VCET SOLECTHON</h2>
         </div>
          
         <div className="flex justify-end items-center w-full">
@@ -55,8 +56,8 @@ export default function NavBar() {
           return (
             <Link
               key={item.path}
-              className={`px-4 py-1  text-sm lg:text-base relative no-underline transition duration-150 ease-out hover:ease-in ${
-                isActive ? "text-[#f4f0e3]" : "text-[#6291f7]"
+              className={`px-4 py-1  text-md lg:text-base font-sans relative no-underline transition duration-150 ease-out hover:ease-in ${
+                isActive ? "text-white" : "text-white"
               }`}
               data-active={isActive}
               href={item.path}
@@ -66,7 +67,7 @@ export default function NavBar() {
               <span>{item.name}</span>
               {item.path === hoveredPath && (
                 <motion.div
-                  className="absolute bottom-0 left-0 h-full bg-red-500 rounded-full -z-10"
+                  className="absolute bottom-0 left-0 h-full bg-yellow rounded-full -z-10"
                   layoutId="navbar"
                   aria-hidden="true"
                   style={{
