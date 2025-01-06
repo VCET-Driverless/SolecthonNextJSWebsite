@@ -37,16 +37,16 @@ export default function NavBar() {
 
   return (
      
-    <div className=" overflow-hidden py-2 px-2 w-full absolute top-0 z-[100] bg-black backdrop-blur-sm">
-      <nav className="flex gap-2 relative justify-start w-full z-[100]  rounded-full">
-        <div className="flex w-[120px] animate">
+    <div className=" overflow-hidden py-2 px-2 w-full absolute top-0 z-[50]  rounded-full ">
+      <nav className="flex gap-2 relative justify-start  z-[100]  mx-2 my-1 ">
+        <div className="border-2 rounded-full flex  p-1   justify-evenly  items-center  border-yellow -z-20 bg-white">
 
-        <img src="images/onlyLogoreal.png" className="w-15 h-10 rounded-full " alt="logo" />
-      
-        </div>
-        <div className="flex justify-start items-center w-full ">
-          <h2 className=" font-normal text-2xl text-white text-center  "> VCET SOLECTHON</h2>
-        </div>
+       
+        <img src="images/onlyLogoreal.png" className="h-10 transform transition-transform duration-300 ease-in-out hover:animate-race" alt="logo" />
+
+        
+       
+       
          
         <div className="flex justify-end items-center w-full">
 
@@ -56,8 +56,8 @@ export default function NavBar() {
           return (
             <Link
               key={item.path}
-              className={`px-4 py-1  text-md lg:text-base font-sans relative no-underline transition duration-150 ease-out hover:ease-in ${
-                isActive ? "text-white" : "text-white"
+              className={`px-4 py-1 z- text-md lg:text-base font-sans relative no-underline transition duration-150 ease-out hover:ease-in ${
+                isActive ? "text-black" : "text-black"
               }`}
               data-active={isActive}
               href={item.path}
@@ -67,7 +67,7 @@ export default function NavBar() {
               <span>{item.name}</span>
               {item.path === hoveredPath && (
                 <motion.div
-                  className="absolute bottom-0 left-0 h-full bg-yellow rounded-full -z-10"
+                  className="absolute bottom-0 left-0 h-full  bg-yellow rounded-full -z-10"
                   layoutId="navbar"
                   aria-hidden="true"
                   style={{
@@ -85,6 +85,7 @@ export default function NavBar() {
             </Link>
           );
         })}
+        </div>
         </div>
       </nav>
     </div>

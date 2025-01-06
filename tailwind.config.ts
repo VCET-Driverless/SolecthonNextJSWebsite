@@ -22,12 +22,25 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-     
       colors: {
-        black: '#45474B', // Define the custom color
-        yellow: "#FFD460",
-        white: "#FAFAFA",
+        black: '#000000', // Define the custom color
+        yellow: "#CF0A0A",
+        white: "#f7f3ea",
       },
+      keyframes: {
+        slideUp: {
+          "0%": {
+            height: "100%",
+          },
+          "100%": {
+            height: "0%",
+          },
+        },
+      },
+      animation: {
+        "slide-up": "slideUp 1s ease-in-out ",
+      },
+
     },
   },
   darkMode: "class",
@@ -44,5 +57,6 @@ function addVariablesForColors({ addBase, theme }: any) {
     ":root": newVars,
   });
 }
+
 
 export default config;
