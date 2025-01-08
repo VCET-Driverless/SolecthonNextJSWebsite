@@ -46,9 +46,9 @@ export const StickyScroll = ({
     "var(--yellow)",
   ];
   const linearGradients = [
-    "linear-gradient(to bottom right, var(--yellow), var(--black))",
-    "linear-gradient(to bottom right, var(--yellow), var(--white))",
-    "linear-gradient(to bottom right, var(--yellow), var(--black))",
+    "linear-gradient(to bottom right, var(--red), var(--black))",
+    "linear-gradient(to bottom right, var(--red), var(--red))",
+    "linear-gradient(to bottom right, var(--red), var(--red))",
   ];
 
   const [backgroundGradient, setBackgroundGradient] = useState(
@@ -99,13 +99,13 @@ export const StickyScroll = ({
               </motion.p>
             </div>
           ))}
-          <div className="h-40" />
+          <div className="h-30" />
         </div>
       </div>
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-          "hidden lg:block h-[300px] w-[450px] rounded-md shadow-xl shadow-yellow sticky top-48 overflow-visible",
+          "hidden lg:block h-[300px] w-[450px] rounded-md  sticky top-48 overflow-visible ",
           contentClassName
         )}
       >

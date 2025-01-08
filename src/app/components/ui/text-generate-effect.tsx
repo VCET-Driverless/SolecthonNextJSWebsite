@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "@/lib/utils/cn";
+import { getNamedMiddlewareRegex } from "next/dist/shared/lib/router/utils/route-regex";
 
 export const TextGenerateEffect = ({
   words,
@@ -48,7 +49,8 @@ export const TextGenerateEffect = ({
     if (showH1) {
       const htwoElement = document.getElementById("htwo");
       if (htwoElement) {
-        htwoElement.innerHTML = "SOLECTHON";
+        htwoElement.innerHTML = '<img src="images/whilename.png" alt="hello" width="500" height="300">';
+
       }
       const honeElement = document.getElementById("hone");
       if (honeElement) {
@@ -78,7 +80,7 @@ export const TextGenerateEffect = ({
         <div className="dark:text-white text-black text-2xl leading-snug tracking-wide">
           {showH1 ? (
             <h1 className="text-3xl text-yellow text-center transition-opacity duration-3000 ease-in-out">
-              A STEP TOWARDS SUSTAINABILITY
+              
             </h1>
           ) : (
             renderWords()

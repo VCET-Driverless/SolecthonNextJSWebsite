@@ -25,7 +25,7 @@ export default function RootLayout({
 
     const timer = setTimeout(() => {
       setIsLoading(false); // Set loading screen to false after a delay (optional)
-    },1000); // Adjust the delay if you need
+    },0); // Adjust the delay if you need
 
     return () => clearTimeout(timer); // Clean up the timer
   }, [pathname]);  // Trigger effect on path change
@@ -34,11 +34,12 @@ export default function RootLayout({
     <html lang="en" >
     
       <body className="bg-[#f7f3ea] ">
-            {isLoading && <Loading />} {/* Show loading screen when loading */}
+            {isLoading && <Loading /> } {/* Show loading screen when loading */}
           <Providers>
-      {/* <BackgroundBeams
-      /> */}
-          <NavBar />
+
+            
+          {isLoading ? null : <NavBar />}
+          
           {children}
         </Providers>
       

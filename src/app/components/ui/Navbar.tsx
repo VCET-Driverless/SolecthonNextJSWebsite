@@ -42,7 +42,7 @@ export default function NavBar() {
         <div className="border-2 rounded-full flex  p-1   justify-evenly  items-center  border-yellow -z-20 bg-white">
 
        
-        <img src="images/onlyLogoreal.png" className="h-10 transform transition-transform duration-300 ease-in-out hover:animate-race" alt="logo" />
+        <img src="images/onlyLogoreal.png" className="h-10 transform transition-transform duration-300 ease-in-out " alt="logo" />
 
         
        

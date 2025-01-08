@@ -8,10 +8,17 @@ import { TextGenerateEffect } from "./components/ui/text-generate-effect";
 import { useRef } from "react";
 import { Button } from "./components/ui/moving-border";
 import { StickyScroll } from "./components/ui/sticky-scroll-reveal";
-import ScrollTracker from "./components/ui/ScrollTracker";
+// import ScrollTracker from "./components/ui/ScrollTracker";
+import {
+  TextRevealCard,
+  TextRevealCardDescription,
+  TextRevealCardTitle,
+} from "./components/ui/text-reveal-card";  
+ 
 // import { StickyScrollImages } from "./components/ui/StickyScrollWithImages";
 import { Image } from "@nextui-org/react";
 import { CardBody, CardContainer, CardItem } from "./components/ui/3d-card";
+import {Shiba} from "./components/3dfile/shiba";
 // import gsap from "gsap";
 // import ImageSequence from "./CarviewimageSequence";
 export default function Home() {
@@ -125,7 +132,7 @@ export default function Home() {
           isZoomed
           src="images/carousel/7.0.jpg"
           alt="Our Objective"
-          className="m-5 w-[450px] h-[300px] object-cover"
+          className="m-5 w-[420px] h-[280px] object-cover  "
         />
       ),
     },
@@ -139,7 +146,7 @@ export default function Home() {
           isZoomed
           src="images/carousel/3.1.png"
           alt="Our Goal"
-          className="m-5 w-[450px] h-[300px] object-cover"
+          className="m-5 w-[420px] h-[280px] object-cover"
         />
       ),
     },
@@ -153,7 +160,7 @@ export default function Home() {
           isZoomed
           src="images/carousel/3.0.png"
           alt="Our Aim"
-          className="m-5 w-[450px] h-[300px] object-cover"
+          className="m-5 w-[420px] h-[280px] object-cover"
         />
       ),
     },
@@ -187,21 +194,23 @@ export default function Home() {
     <>
     
       <div className="snap-y snap-mandatory h-screen overflow-y-scroll overflow-clip z-10">
-        {/* Carousel */}
-        <Carousel />
-
+        <div id="trigger" className=" snap-center  w-screen h-screen  bg-white justify-center">
+          {/* <ScrollTracker /> */}
+          <Shiba />
+        </div>
+      
         {/* Video Section */}
         <div className="snap-center overflow-hidden relative w-screen h-screen flex flex-col justify-evenly items-center pt-[10vh]">
           {isClient && (
             <div className="absolute top-0 left-0 w-screen h-screen z-0 transform scale-110">
               <ReactPlayer
-                url="https://youtu.be/2-9KmXhLVJQ" // Replace with your YouTube video URL
+                url="https://youtu.be/2-9KmXhLVJQ&vq=hd1080" // Replace with your YouTube video URL
                 playing
                 loop
                 muted
                 width="100%"
                 height="100%"
-                className="scale-x-125 overflow-hidden scale-y-100 react-player"
+                className=" overflow-hidden  react-player"
               />
             </div>
           )}
@@ -245,24 +254,30 @@ export default function Home() {
             </div>
           </div>
         </div>
+           {/* Carousel */}
+        <Carousel />
 
         {/* Sticky roll  */}
         <div className="snap-center  w-screen h-screen overflow-hidden justify-center ">
           <div className="">
-            <StickyScroll content={contents} contentClassName="" />
+            <StickyScroll content={contents} contentClassName="overflow-visible" />
           </div>
         </div>
 
-        {/* Car View */}
+     
 
-        <div id="trigger" className=" snap-center  w-screen h-screen  bg-white justify-center">
-          <ScrollTracker />
-        </div>
         {/* Links View */}
         <div className=" snap-center  w-screen h-screen  bg-white justify-evenly">
               <div className="relative top-20 text-slate-400 ">
-        <h1 className=" text-4xl font-bold text-center  scale-125 "> Electric Future Mobility</h1>
-                </div>
+          <TextRevealCard
+        text="      Emerging Future Mobility"
+        revealText="A Step Towards Sustainaility"
+        className="bg-white w-screen flex   justify-items-center justify-center"
+      >
+
+        </TextRevealCard>
+
+          </div>
           <div className="flex flex-col lg:flex-row overflow-y-scroll w-full h-full  items-center justify-around p-4">
            <a href="/team" >
             <CardContainer className="inter-var">
