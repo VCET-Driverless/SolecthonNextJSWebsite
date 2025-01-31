@@ -57,7 +57,9 @@ export const StickyScroll = ({
 
   useEffect(() => {
     setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
+    // console.log("scroll",scrollYProgress);
   }, [activeCard]);
+
 
   return (
     <motion.div
@@ -66,7 +68,7 @@ export const StickyScroll = ({
       // }}
       className="h-[100vh] overflow-visible overflow-y-auto flex justify-center iteam-center relative space-x-52 rounded-md p-10"
       ref={ref}
-    >
+    > 
       <div className="div relative flex items-start px-4">
         <div className="max-w-2xl flex flex-col justify-center items-center ">
           {content.map((item, index) => (
