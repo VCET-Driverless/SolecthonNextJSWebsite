@@ -18,13 +18,13 @@ const Loading: React.FC = () => {
         <img
           src="/images/Loading.gif"
           alt="Loading"
-          className="w-1/2 h-auto  bg-black rounded-xl"
+          className="w-1/2 h-auto  bg-[#220719] rounded-xl"
         />
         
         <img
         src="/images/pb.webp"
         alt="Loading"
-        className='w-1/3 h-20 '
+        className='w-1/2 h-20 '
         />
       </div>
     </div>

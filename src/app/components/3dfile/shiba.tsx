@@ -7,7 +7,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { Mesh } from "three";
 
 function MeshComponent() {
-  const fileUrl = "/carmodel/scene.glb";  // put here name of the file 
+  const fileUrl = "/carmodel/scene.gltf";  // put here name of the file 
   const mesh = useRef<Mesh>(null!);
   const gltf = useLoader(GLTFLoader, fileUrl);
 

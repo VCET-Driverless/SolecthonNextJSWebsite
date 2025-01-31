@@ -51,12 +51,13 @@ const ScrollTracker: React.FC = () => {
       style={{ height: '100vh', overflowY: 'scroll' }}
       className='flex items-center justify-center bg-[#090909]'
     >
-      <div className='h-[400vh]'>a</div>
-      <div className='h-[400vh]'></div>
-      <img
+      <div className='h-[400vh] bg-pink-600'></div>
+      <div className='h-[400vh] bg-gray-500'></div>
+      <div className='h-[400vh] bg-red-500'></div>
+      {/* <img
         className={`sticky z-0 top-0 left-0 hell h-screen w-screen transition-transform duration-1000 ${scrollValue > 1000 ? '-translate-x-full' : 'translate-x-0'}`}
         src={`images/animatedshow/ezgif-frame-0${(Math.floor(scrollValue / 33) + 1) > 33 ? 33 : (Math.floor(scrollValue / 33) + 1)}.jpg`}
-      />
+      /> */}
     </div>
   );
 };

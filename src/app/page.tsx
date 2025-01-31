@@ -11,13 +11,12 @@ import { StickyScroll } from "./components/ui/sticky-scroll-reveal";
 // import ScrollTracker from "./components/ui/ScrollTracker";
 import {
   TextRevealCard,
-  TextRevealCardDescription,
-  TextRevealCardTitle,
+
 } from "./components/ui/text-reveal-card";  
  
 // import { StickyScrollImages } from "./components/ui/StickyScrollWithImages";
 import { Image } from "@nextui-org/react";
-import { CardBody, CardContainer, CardItem } from "./components/ui/3d-card";
+import HorizontalCards from "./components/ui/horizontalscroll";
 import {Shiba} from "./components/3dfile/shiba";
 // import gsap from "gsap";
 // import ImageSequence from "./CarviewimageSequence";
@@ -94,6 +93,7 @@ export default function Home() {
       ],
     },
   ];
+
   useEffect(() => {
     if (!textBlockRef.current) return;
 
@@ -130,7 +130,7 @@ export default function Home() {
         <Image
           isBlurred
           isZoomed
-          src="images/carousel/7.0.jpg"
+          src="images/carousel/homecarousel/7.0.jpg"
           alt="Our Objective"
           className="m-5 w-[420px] h-[280px] object-cover  "
         />
@@ -144,7 +144,7 @@ export default function Home() {
         <Image
           isBlurred
           isZoomed
-          src="images/carousel/3.1.png"
+          src="images/carousel/homecarousel/3.1.png"
           alt="Our Goal"
           className="m-5 w-[420px] h-[280px] object-cover"
         />
@@ -158,7 +158,7 @@ export default function Home() {
         <Image
           isBlurred
           isZoomed
-          src="images/carousel/3.0.png"
+          src="images/carousel/homecarousel/3.0.png"
           alt="Our Aim"
           className="m-5 w-[420px] h-[280px] object-cover"
         />
@@ -195,7 +195,7 @@ export default function Home() {
     
       <div className="snap-y snap-mandatory h-screen overflow-y-scroll overflow-clip z-10">
         <div id="trigger" className=" snap-center  w-screen h-screen  bg-white justify-center">
-          {/* <ScrollTracker /> */}
+          {/* ScrollTracker  */}
           <Shiba />
         </div>
       
@@ -266,7 +266,7 @@ export default function Home() {
 
      
 
-        {/* Links View */}
+      {/* cars veiw page */}
         <div className=" snap-center  w-screen h-screen  bg-white justify-evenly">
               <div className="relative top-20 text-slate-400 ">
           <TextRevealCard
@@ -278,129 +278,24 @@ export default function Home() {
         </TextRevealCard>
 
           </div>
-          <div className="flex flex-col lg:flex-row overflow-y-scroll w-full h-full  items-center justify-around p-4">
-           <a href="/team" >
-            <CardContainer className="inter-var">
-              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
-                <CardItem
-                  translateZ="50"
-                  className="text-xl font-bold text-black dark:text-white"
-                >
-                  Meet Our Team
-                </CardItem>
-                <CardItem
-                  as="p"
-                  translateZ="60"
-                  className="text-black text-sm max-w-sm mt-2 dark:text-neutral-300"
-                >
-                 Our team is composed of amazing group of engineers, innovators and problem solvers.
-                </CardItem>
-                <CardItem
-                  translateZ="100"
-                  
-                  className="w-full mt-4"
-                >
-                  <Image
-                    src="images/onlyLogoreal.png"
-                    height="1000"
-                    width="1000"
-                    className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                    alt="thumbnail"
-                  />
-                </CardItem>
-                
-              </CardBody>
-            </CardContainer>
-           </a>
-            <a href="/Sponsors" >
-            <CardContainer className="inter-var">
-              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
-                <CardItem
-                  translateZ="50"
-                  className="text-xl font-bold text-neutral-600 dark:text-white"
-                >
-                  Meet Our Sponsors
-                </CardItem>
-                <CardItem
-                  as="p"
-                  translateZ="60"
-                  className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-                >
-               Our sponsors make everything we do possible and support us in our mission .
-                </CardItem>
-                <CardItem
-                  translateZ="100"
-                  // rotateX={20}
-                  // rotateZ={-10}
-                  className="w-full mt-4"
-                >
-                  <Image
-                    src="images/onlyLogoreal.png"
-                    height="1000"
-                    width="1000"
-                    className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                    alt="thumbnail"
-                  />
-                </CardItem>
-                
-              </CardBody>
-            </CardContainer>
-            </a>
-            <a href="/Cars">
-
-            <CardContainer className="inter-var"  >
-              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
-                <CardItem
-                  translateZ="50"
-                  className="text-xl font-bold text-neutral-600 dark:text-white"
-                >
-                  Meet Our Cars
-                </CardItem>
-                <CardItem
-                  as="p"
-                  translateZ="60"
-                  className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-                >
-                  Our team produced number of unique and impressive vehicles           
-                          </CardItem>
-                <CardItem
-                  translateZ="100"
-                  // rotateX={20}
-                  // rotateZ={-10}
-                  className="w-full mt-4"
-                >
-                  <Image
-                    src="images/onlyLogoreal.png"
-                    height="1000"
-                    width="1000"
-                    className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                    alt="thumbnail"
-                  />
-                </CardItem>
-                
-              </CardBody>
-            </CardContainer>
-            </a>
-
-          </div>
+          <HorizontalCards />
+         
 
         </div>
 
-
+         {/* Links View */}
 
 
         {/* statics */}
 
-        <section className="py-14 h-[50vh]">
+        {/* <section className="py-14 h-[50vh]">
           <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
             <div className="max-w-2xl mx-auto text-center flex justify-center items-center">
               <Image src="images/onlyLogoreal.png" alt="Solecthon" width={180} height={150}
                 isBlurred
 
               />
-              {/* <p className="mt-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis sollicitudin quam ut tincidunt.
-                    </p> */}
+           
             </div>
             <div className="mt-12">
               <ul className="flex flex-col items-center justify-center gap-y-10 sm:flex-row sm:flex-wrap lg:divide-x">
@@ -411,7 +306,7 @@ export default function Home() {
                         <Image
 
                           isZoomed
-                          src="images/infinity.svg" // Replace with your image path
+                          src="images/infinity.svg" 
                           alt="INF"
                           width={70}
                           height={60}
@@ -427,9 +322,9 @@ export default function Home() {
               </ul>
             </div>
           </div>
-        </section>
+        </section> */}
         {/* Footer */}
-        <footer className="text-gray-500 h-[50vh] snap-end px-4 py-3 max-w-screen-xl mx-auto md:px-8">
+        {/* <footer className="text-gray-500 h-[50vh] snap-end px-4 py-3 max-w-screen-xl mx-auto md:px-8">
           <div className="gap-6 justify-between md:flex">
             <div className="flex-1">
               <div className="max-w-xs">
@@ -547,7 +442,7 @@ export default function Home() {
               fill: currentColor;
             }
           `}</style>
-        </footer>
+        </footer> */}
       </div>
 
       {/* */}

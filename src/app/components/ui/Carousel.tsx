@@ -4,10 +4,10 @@ import { useState, useEffect, SetStateAction } from 'react';
 const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const items = [
-    'images/carousel/1.0.png',
-    'images/carousel/autonomous-7.0.jpg',
-    'images/carousel/3.0.png',
-    'images/carousel/3.1.png',
+    'images/carousel/homecarousel/1.0.png',
+    'images/carousel/homecarousel/autonomous-7.0.jpg',
+    'images/carousel/homecarousel/3.0.png',
+    'images/carousel/homecarousel/3.1.png',
   ];
 
   useEffect(() => {
